@@ -1,18 +1,15 @@
 import ProdutoItem from "@/components/produto/ProdutoItem";
-import Cabecalho from "@/components/template/Cabecalho";
-import Rodape from "@/components/template/Rodape";
+import Pagina from "@/components/template/Pagina";
 import { produtos } from "@/core";
 
 export default function Home() {
   return (
-    <>
-      <Cabecalho />
+    <Pagina>
       <div className="grid grid-cols-4 container">
         {produtos.map((produto) => (
           <ProdutoItem key={produto.id} produto={produto} />
         ))}
       </div>
-      <Rodape />
-    </>
+    </Pagina>
   );
 }
